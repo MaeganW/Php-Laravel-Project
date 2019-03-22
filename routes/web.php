@@ -27,6 +27,11 @@ Route::get('/hello_world', function () {
     return 'hello world';
 });
 
+Route::get('role',[
+    'middleware' => 'Role:Supreme Mugwump',
+    'uses' => 'TestController@index',
+ ]);
+
 
 // =================================
 
