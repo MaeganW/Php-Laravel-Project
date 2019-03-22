@@ -86,6 +86,8 @@
       <div class="title m-b-md">
         <p>This is <a href="{{ route('name') }}">Me</a>, I'm saying <a href="{{url('/hello')}}">hello</a>.</p>
       </div>
+
+      @if (5 == 6)
       <div class="title m-b-md">
         Laravel
       </div>
@@ -99,6 +101,8 @@
         <a href="https://forge.laravel.com">Forge</a>
         <a href="https://github.com/laravel/laravel">GitHub</a>
       </div>
+      @endif
+
     </div>
   </div>
 </body>
