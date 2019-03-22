@@ -69,14 +69,14 @@
 <body>
   <div class="flex-center position-ref full-height">
     @if (Route::has('hello'))
-    <div class="top-right links">
-      <p>This is conditionally rendering based on route params!</p>
+    <div>
+      <p>This won't render because the route hasn't been named hello!</p>
     </div>
     @endif
 
     <div class="content">
       <div class="title m-b-md">
-        <p>Hellos are great. Hugs are better.</p>
+        <p>Hellos are great. Hugs are <a href="{{route('welcome')}}">better</a>.</p>
       </div>
 
     </div>
