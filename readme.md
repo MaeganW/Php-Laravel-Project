@@ -69,4 +69,55 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
 # Php-Laravel-Project
+
+## How to get started (My Super Simple Guide)
+
+BTW - this guy is your best friend: https://www.youtube.com/watch?v=rs2Hzx4qBm8
+
+This is also helpful: https://www.tutorialspoint.com/laravel/laravel_installation.htm
+
+- Create a new laravel. Project in the new dir you create
+
+composer create-project --prefer-dist laravel/laravel nameOfProjectHere
+
+- add homestead to the project:
+
+composer require laravel/homestead --dev
+
+- Homestead is now in your project, in that project, run homestead make command to get all the goodies:
+
+vendor/bin/homestead make
+
+- If you don’t have ssh key, create one now:
+
+ssh-keygen -t rsa -C “test@whatever.com"
+
+- Can ssh into Vagrant and then exit if you need to now - not important right now
+
+(need to ‘vagrant up’ first)
+
+Vagrant ssh
+
+- After changing homestead.yaml (if you did actually do so - as in bumping the cpus and memory), need to provision reload vagrant
+
+vagrant reload --provision
+
+- After reloading, run this:
+
+Vagrant up
+
+- Then navigate to the ip listed in the homestead.yaml to view the larval site you just created
+
+- Aparently this serves the development server for your new app
+
+Php artisan serve
+
+- I used that command, navigated to the link and presto!  Website.  Go figure.
+
+- To make middleware: https://www.tutorialspoint.com/laravel/laravel_middleware.htm  php artisan make:middleware <middleware-name></middleware-name>
+
+- To make a controller:
+
+php artisan make:controller TestController --plain
